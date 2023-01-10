@@ -52,11 +52,11 @@ namespace dotnet_ef_core_2.Controllers
             var entity = _context.AssetEntities.Find(id);
             if(entity == null)
             {
-                return Redirect("/Category/Delete");
+                return Redirect("/Asset/Delete");
             }
             _context.AssetEntities.Remove(entity);
             _context.SaveChanges();
-            return Redirect("/Category/Delete");
+            return Redirect("/Asset/Delete");
         }
 
         [HttpPost]
